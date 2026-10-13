@@ -1,3 +1,5 @@
+import type { PublicKeyCredentialRequestOptionsJSON } from '@simplewebauthn/browser';
+
 export interface Errors {
   INVALID_ENDPOINT_ERROR: {
     code: 'INVALID_ENDPOINT_ERROR';
