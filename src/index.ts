@@ -2,7 +2,7 @@ import { Errors, Successes } from './responses.js';
 
 export type SecondFactorType = 'totp' | 'webauthn';
 
-namespace Structures {
+export namespace Structures {
   /**
    * It's a user!
    */
@@ -163,5 +163,6 @@ namespace Structures {
   }
 }
 
+export * as Enums from './enums.js';
 export { Errors, Successes } from './responses.js';
 export default Structures;
