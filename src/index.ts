@@ -24,7 +24,7 @@ export namespace Structures {
    * Session associated with a user.
    */
   export interface Session {
-    id: number;
+    id: string;
     exp: string;
     name: string;
     permissionFlags: number | null;
@@ -115,7 +115,8 @@ export namespace Structures {
   }
 
   export type SecondFactorRegistration =
-    SecondFactorTOTPRegistration | SecondFactorWebAuthnRegistration;
+    | SecondFactorTOTPRegistration
+    | SecondFactorWebAuthnRegistration;
 
   export interface File {
     id: string;
