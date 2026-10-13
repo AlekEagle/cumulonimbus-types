@@ -2,30 +2,7 @@ import { Errors, Successes } from './responses.js';
 
 export type SecondFactorType = 'totp' | 'webauthn';
 
-type PublicKeyCredentialHint = 'hybrid' | 'security-key' | 'client-device';
-
-export type AttestationFormat =
-  | 'fido-u2f'
-  | 'packed'
-  | 'android-safetynet'
-  | 'android-key'
-  | 'tpm'
-  | 'apple'
-  | 'none';
-
-interface PublicKeyCredentialCreationOptionsJSON {
-  rp: PublicKeyCredentialRpEntity;
-  user: PublicKeyCredentialUserEntityJSON;
-  challenge: Base64URLString;
-  pubKeyCredParams: PublicKeyCredentialParameters[];
-  timeout?: number;
-  excludeCredentials?: PublicKeyCredentialDescriptorJSON[];
-  authenticatorSelection?: AuthenticatorSelectionCriteria;
-  hints?: PublicKeyCredentialHint[];
-  attestation?: AttestationConveyancePreference;
-  attestationFormats?: AttestationFormat[];
-  extensions?: AuthenticationExtensionsClientInputs;
-}
+import type { PublicKeyCredentialCreationOptionsJSON } from '@simplewebauthn/browser';
 
 export namespace Structures {
   /**
@@ -140,8 +117,7 @@ export namespace Structures {
   }
 
   export type SecondFactorRegistration =
-    | SecondFactorTOTPRegistration
-    | SecondFactorWebAuthnRegistration;
+    SecondFactorTOTPRegistration | SecondFactorWebAuthnRegistration;
 
   export interface File {
     id: string;
