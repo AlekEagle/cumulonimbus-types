@@ -154,8 +154,8 @@ export interface Errors {
     message: string;
   };
 
-  INTERNAL_ERROR: {
-    code: 'INTERNAL_ERROR';
+  INTERNAL_SERVER_ERROR: {
+    code: 'INTERNAL_SERVER_ERROR';
     message: string;
   };
 
