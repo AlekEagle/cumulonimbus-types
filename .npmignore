@@ -3,3 +3,4 @@ src
 dist/test
 .vscode
 .zed
+tsconfig.json
