@@ -138,6 +138,11 @@ namespace Structures {
     state: boolean;
   }
 
+  export interface APIStatus {
+    version: string;
+    hello: 'world';
+  }
+
   export interface SecondFactorRegisterSuccess {
     id: string;
     name: string;
