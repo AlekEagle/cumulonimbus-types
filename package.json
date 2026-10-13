@@ -1,0 +1,24 @@
+{
+  "name": "cumulonimbus-types",
+  "version": "1.0.0",
+  "description": "The types for Culonimbus API.",
+  "type": "module",
+  "types": "src/index.d.ts",
+  "scripts": {
+  	"build": "tsc",
+    "check": "tsc --noEmit --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlekEagle/cumulonimbus-types.git"
+  },
+  "author": "Alek Evans",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlekEagle/cumulonimbus-types/issues"
+  },
+  "homepage": "https://github.com/AlekEagle/cumulonimbus-types#readme",
+  "devDependencies": {
+    "typescript": "^7.0.2"
+  }
+}
