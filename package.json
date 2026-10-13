@@ -1,7 +1,7 @@
 {
   "name": "cumulonimbus-types",
   "version": "1.0.0",
-  "description": "The types for Culonimbus API.",
+  "description": "The types for Cumulonimbus API.",
   "type": "module",
   "types": "src/index.d.ts",
   "scripts": {
@@ -19,9 +19,7 @@
   },
   "homepage": "https://github.com/AlekEagle/cumulonimbus-types#readme",
   "devDependencies": {
+    "prettier": "^3.9.10",
     "typescript": "^7.0.2"
-  },
-  "dependencies": {
-    "prettier": "^3.9.10"
   }
 }
