@@ -1,11 +1,11 @@
-import {Errors, Successes} from "./responses.js";
+import { Errors, Successes } from './responses.js';
 
 export type SecondFactorType = 'totp' | 'webauthn';
 
 namespace Structures {
-	/**
-	 * It's a user!
-	 */
+  /**
+   * It's a user!
+   */
   export interface User {
     id: string;
     username: string;
@@ -99,8 +99,7 @@ namespace Structures {
     type: SecondFactorType;
   }
 
-  export interface SecondFactorTOTPRegistration
-      extends SecondFactorBaseRegistration {
+  export interface SecondFactorTOTPRegistration extends SecondFactorBaseRegistration {
     type: 'totp';
     secret: string;
     algorithm: string;
@@ -109,15 +108,14 @@ namespace Structures {
   }
 
   export interface SecondFactorWebAuthnRegistration
-      extends
-        SecondFactorBaseRegistration,
-        PublicKeyCredentialCreationOptionsJSON {
+    extends
+      SecondFactorBaseRegistration,
+      PublicKeyCredentialCreationOptionsJSON {
     type: 'webauthn';
   }
 
   export type SecondFactorRegistration =
-    | SecondFactorTOTPRegistration
-    | SecondFactorWebAuthnRegistration;
+    SecondFactorTOTPRegistration | SecondFactorWebAuthnRegistration;
 
   export interface File {
     id: string;
@@ -160,5 +158,5 @@ namespace Structures {
   }
 }
 
-export {Errors, Successes} from "./responses.js";
+export { Errors, Successes } from './responses.js';
 export default Structures;
