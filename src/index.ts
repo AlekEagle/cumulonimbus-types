@@ -1,4 +1,5 @@
 import { Errors, Successes } from './responses.js';
+import type { InstructionStepActions } from './enums.js';
 
 export type SecondFactorType = 'totp' | 'webauthn';
 
@@ -50,13 +51,23 @@ export namespace Structures {
     [K in keyof Successes[T]]: Successes[T][K];
   };
 
+  export interface InstructionFile {
+    name: string;
+    content: string;
+  }
+
+  export interface InstructionStep {
+    action: InstructionStepActions;
+    content: string;
+    file?: InstructionFile;
+    url?: string;
+  }
+
   export interface Instruction {
     id: string;
     name: string;
     description: string;
-    steps: string[];
-    filename: string;
-    content: string;
+    steps: InstructionStep[];
     createdAt: string;
     updatedAt: string;
   }

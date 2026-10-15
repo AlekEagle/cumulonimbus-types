@@ -74,3 +74,10 @@ export enum LogLevel {
   INFO = 'INFO',
   DEBUG = 'DEBUG',
 }
+
+export enum InstructionStepActions {
+  OPEN_URL = 'OPEN_URL',
+  COPY_TOKEN_TO_CLIPBOARD = 'COPY_TOKEN_TO_CLIPBOARD',
+  DOWNLOAD_CONFIG_FILE = 'DOWNLOAD_CONFIG_FILE',
+  NOOP = 'NOOP',
+}
